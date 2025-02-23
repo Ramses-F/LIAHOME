@@ -357,6 +357,68 @@ Kiev, Ukraine 78692</p>
 
 <!-- end footer --> 
 
+<!-- Menu Popup -->
+<div class="menu-popup" id="menuPopup">
+  <div class="menu-content">
+    <span class="close-btn" id="closeMenu">&times;</span>
+    <ul class="menu-list">
+      <li><a href="index.html">ACCEUIL</a></li>
+      
+      <li class="dropdown">
+        <a href="#">LIAHOME</a>
+        <ul class="submenu">
+          <li><a href="about-homepark.html">À Propos</a></li>
+          <li><a href="homepark-blocks.html">Liahome Blogs</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">PAGES</a>
+        <ul class="submenu">
+          <li><a href="sales-offices.html">Nos Locaux</a></li>
+          <li><a href="photo-gallery.html">Galerie Photo</a></li>
+          <li><a href="intro-video.html">Vidéo</a></li>
+          <li><a href="sales.html">Notre Équipe</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- end footer --> 
+
+<!-- JS FILES --> 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const menuPopup = document.getElementById('menuPopup');
+  const closeMenu = document.getElementById('closeMenu');
+
+  if (hamburger && menuPopup && closeMenu) {
+    // Ouvrir le popup au clic sur le menu hamburger
+    hamburger.addEventListener('click', () => {
+      menuPopup.classList.add('active');
+    });
+
+    // Fermer le popup au clic sur le bouton de fermeture
+    closeMenu.addEventListener('click', () => {
+      menuPopup.classList.remove('active');
+    });
+
+    // Fermer le popup en cliquant à l'extérieur
+    menuPopup.addEventListener('click', (event) => {
+      if (event.target === menuPopup) {
+        menuPopup.classList.remove('active');
+      }
+    });
+  }
+});
+
+
+
+</script>
 <!-- JS FILES --> 
 <script src="js/jquery.min.js"></script> 
 <script src="js/popper.min.js"></script> 

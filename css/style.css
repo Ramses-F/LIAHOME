@@ -8,6 +8,7 @@
 }
 
 /* Styles pour le popup */
+/* Assurer que le popup est bien au-dessus du reste du site */
 .menu-popup {
   position: fixed;
   top: 0;
@@ -21,12 +22,20 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000; /* Assurez-vous que c'est plus grand que les autres éléments */
 }
 
 .menu-popup.active {
   opacity: 1;
   visibility: visible;
 }
+
+/* Empêcher le contenu du site d’être au-dessus du popup */
+body {
+  position: relative;
+  z-index: 1;
+}
+
 
 .menu-content {
   background: white;
