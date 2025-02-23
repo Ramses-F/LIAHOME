@@ -7,6 +7,15 @@
   outline: none !important;
 }
 
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff; /* Change la couleur selon ton design */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -674,8 +683,12 @@ button[type=submit] {
 .navbar .container .upper-side .logo {
   margin-left: 0;
 }
-.navbar .container .upper-side .logo img {
-  height: 48px;
+
+.navbar .container .upper-side .logo a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
 }
 .navbar .container .upper-side .phone-email {
   margin-right: 0;

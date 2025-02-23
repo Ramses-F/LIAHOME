@@ -62,13 +62,16 @@
 <nav class="navbar">
   <div class="container">
     <div class="upper-side">
-      <div class="logo"> <a href="index.html"><img src="images/logo-light.png" alt="Image"></a> </div>
+      <div class="logo"> <a href="index.html">LIAHOME</a> </div>
       <!-- end logo -->
       <div class="phone-email"> <img src="images/icon-phone.png" alt="Image">
         <h4>+380(98)298-59-73</h4>
         <small><a href="#">hello@homepark.com.ua</a></small> </div>
       <!-- end phone -->
-      <div class="language"> <a href="#">EN</a> <a href="#">UA</a> </div>
+       
+      <div class="language" id="google_translate_element">
+        
+      </div>
       <!-- end language -->
       <div class="hamburger">
         <span></span>
@@ -93,15 +96,6 @@
             <li><a href="sales.html">Notre équipe</a></li>
           </ul>
         </li>
-        <!--<li><a href="#">APARTMENTS</a>
-          <ul>
-            <li><a href="apartment-one-room.html">1 Room 47m²</a></li>
-            <li><a href="apartment-two-rooms.html">2 Rooms 65m²</a></li>
-            <li><a href="apartment-three-rooms.html">3 Rooms 90m²</a></li>
-          </ul>
-        </li>-->
-       <!-- <li><a href="facilities.html">FACILITIES</a></li>
-        <li><a href="news.html">NEWS</a></li>-->
         <li><a href="contact.html">CONTACT</a></li>
       </ul>
     </div>
@@ -497,7 +491,8 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.05s"> <img src="images/logo-light.png" alt="Image" class="logo">
+      <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.05s">
+        <h2 class="logo-text">LIAHOME</h2>
         <p>Chez LIAHOME, nous visons à élever la qualité de vie à un niveau supérieur grâce à tous les projets réalisés.
           LIAHOME continue ainsi d’être la référence en matière de luxe immobilier, en offrant des espaces de vie exceptionnels qui allient confort, design et innovation. Chaque projet que nous concrétisons est une promesse d'élégance et de bien-être.</p>
         <div class="select-box dropdown show"> <a class="dropdown-toggle" href="#" role="button" id="language-select" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span><img src="images/flag-en.svg" alt="Image"> FRANCE</span> </a>
@@ -573,6 +568,26 @@
   });
 });
 
+</script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: 'fr', includedLanguages: 'en,fr,uk', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+      'google_translate_element'
+    );
+  }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Script pour changer la langue -->
+<script type="text/javascript">
+  function changeLanguage(lang) {
+    const googleTranslateElement = document.querySelector('.goog-te-combo');
+    if (googleTranslateElement) {
+      googleTranslateElement.value = lang; // Sélectionne la langue
+      googleTranslateElement.dispatchEvent(new Event('change')); // Déclenche la traduction
+    }
+  }
 </script>
 <script src="js/jquery.min.js"></script> 
 <script src="js/popper.min.js"></script> 
